@@ -1,127 +1,221 @@
-/*This means that when screen size is lower than 1200px the desktop navigation will disapear*/
-@media screen and (max-width: 1400px){
-    #profile{
-        height: 83vh;
-        margin-bottom: 6rem;
-    }
-    .about-containers{
-        flex-wrap: wrap;
-    }
+/* ----- General Responsive Rules ----- */
+
+/* Slightly smaller screens (like large laptops) */
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+
+  .about-containers {
+    flex-wrap: wrap;
+  }
 }
 
-@media screen and (max-width: 1200px){
-    #desktop-nav{
-        display: none;
-    }
-    #hamburger-nav{
-        display:flex;
-    }
-    #experience,.experience-details-container {
-        margin-top: 2rem;
-    }
-    #profile, .section-container{
-        display: block;
-    }
-    .arrow{
-        display: none;
-    }
-    section, .section-container{
-        height:fit-content;
-    }
-    section{
-        margin: 0 5%;
-    }
-    .section pic-container {
-        width: 275px;
-        height: 275px;
-        margin: 0 auto 2rem;
-    }
-    .about-containers{
-        margin-top: 0;
-    }
+/* ----- Tablet Screens (<=1200px) ----- */
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+  }
+
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+
+  #profile,
+  .section-container {
+    display: block;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  section,
+  .section-container {
+    height: fit-content;
+  }
+
+  section {
+    margin: 0 5%;
+  }
+
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+
+  .about-containers {
+    margin-top: 0;
+  }
 }
 
-@media screen and (max-width: 600px){
-    #contact, footer{
-        height: 40vh;
-    }
-    #profile{
-        height: 83vh;
-        margin-bottom: 0;
-    }
-    article {
-        font-size: 1rem;
-    }
-    footer nav{
-        height: fit-content;
-        margin-bottom: 2rem;
-    }
-    .about-containers, .contact-info-upper-container, .btn-container{
-        flex-wrap: wrap;
-    }
-    .contact-info-container{
-        margin: 0;
-    }
-    .contact-info-container p, .nav-links li a{
-        font-size: 1rem;
-    }
-    .experience-sub-title {
+/* ----- Mobile Screens (<=600px) ----- */
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: 40vh;
+  }
+
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+
+  article {
+    font-size: 1rem;
+  }
+
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+
+  .contact-info-container {
+    margin: 0;
+  }
+
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  .experience-sub-title {
     font-size: 1.25rem;
-    }
-    .logo {
-        font-size: 1.5rem;
-    }
-    .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
-    }
-    .section__pic-container {
-        width: auto;
-        height: 46vw;
-        justify-content: center;
-    }
-    .section__text__p2 {
-        font-size: 1.25rem;
-    }
-    .title {
-        font-size: 2rem;
-    }
-    .text-container {
-        text-align: justify;
-    }
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+
+  .section_text_p2 {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .text-container {
+    text-align: justify;
+  }
 }
 
-/* ----- Responsive layout for Skills section ----- */
+/* ----- Responsive layout for Skills (Experience) section ----- */
 
 /* Tablets - 2 columns */
 @media (max-width: 1100px) {
   #experience {
     padding: 3rem 4rem;
   }
+
   #experience .about-containers {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
+
+  #experience .details-container {
+    text-align: center;
+  }
 }
 
-/* Mobile - 1 column */
+/* Mobiles - 1 column */
 @media (max-width: 700px) {
   #experience {
     padding: 2rem 1.5rem;
   }
+
   #experience .about-containers {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
   }
+
   #experience .details-container {
+    width: 90%;
     padding: 1.5rem;
+    text-align: center;
   }
+
   #experience .experience-sub-title {
     font-size: 1.4rem;
   }
+
   #experience .article-container {
-    grid-template-columns: 1fr; /* make skills 1 column on small screens */
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 0.75rem;
+  }
+
+  #experience article h3 {
+    font-size: 1rem;
+  }
+
+  #experience article p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ----- Responsive layout for Projects section ----- */
+@media (max-width: 900px) {
+  #projects .experience-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  #projects .details-container {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+    word-wrap: break-word;
+  }
+
+  .btn-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .project-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
   }
 }
