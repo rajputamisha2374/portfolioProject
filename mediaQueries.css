@@ -157,46 +157,39 @@
     align-items: center;
   }
 
-  /* 🔹 Increased box size and spacing */
   #experience .details-container {
-    width: 95%;                /* slightly wider */
-    min-height: 480px;         /* increased height */
-    padding: 2.5rem 1.5rem;    /* more inner space */
-    background: #fff;
-    border-radius: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 1rem;
     text-align: center;
   }
 
-  /* 🔹 Adjust titles inside boxes */
   #experience .experience-sub-title {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+    font-size: 1rem;
   }
 
-  /* 🔹 Space out each skill item */
   #experience .article-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 
   #experience article h3 {
-    font-size: 1rem;
-    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
   }
 
   #experience article p {
-    font-size: 0.9rem;
-    color: rgb(110, 110, 110);
+    font-size: 0.7rem;
   }
 
-  #experience article img.icon {
-    height: 1.1rem;
-    width: 1.1rem;
+  #experience .details-container{
+    width: 100%;           
+    min-height: 380px;    
+    padding: 2rem;        
+    background: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   }
 }
-
 
 /* ----- Responsive layout for Projects section ----- */
 @media (max-width: 900px) {
