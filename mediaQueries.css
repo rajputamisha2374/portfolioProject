@@ -1,85 +1,53 @@
-/* ----- Tablet and small laptop screens (up to 1200px) ----- */
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
+/* ----- Responsive layout: phones up to 950px ----- */
+@media screen and (max-width: 950px) {
 
-  #hamburger-nav {
-    display: flex;
-  }
-
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-
-  #profile,
-  .section-container {
-    display: block;
-  }
-
-  .arrow {
-    display: none;
-  }
-
-  section,
-  .section-container {
-    height: fit-content;
-  }
-
-  section {
-    margin: 0 5%;
-  }
-
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-  }
-
-  .about-containers {
-    margin-top: 0;
-  }
-}
-
-/* ----- Modern phones (up to 900px) ----- */
-@media screen and (max-width: 900px) {
+  /* General layout */
   body {
     font-size: 0.95rem;
+    overflow-x: hidden;
   }
 
-  #projects .experience-details-container,
-  #experience .about-containers {
+  /* PROJECT SECTION */
+  #projects {
+    padding: 2rem 1rem;
+  }
+
+  #projects .experience-details-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
-  /* Project cards */
   #projects .details-container {
-    width: 90%;
+    width: 95%;
     max-width: 400px;
+    background: #fff;
+    padding: 1.2rem 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
     text-align: center;
-    padding: 1.5rem;
-    margin: 0 auto;
   }
 
   .project-img {
-    width: 100%;
-    height: auto;
-    border-radius: 1.5rem;
+    width: 90%;
+    max-height: 180px;
+    object-fit: contain;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
   }
 
   .project-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
     word-wrap: break-word;
   }
 
   .btn-container {
-    flex-wrap: wrap;
+    display: flex;
     justify-content: center;
     gap: 0.8rem;
+    flex-wrap: wrap;
   }
 
   .project-btn {
@@ -87,20 +55,29 @@
     padding: 0.6rem 1.2rem;
   }
 
-  /* Skills section */
+  /* SKILLS SECTION */
   #experience {
     padding: 2rem 1rem;
   }
 
+  #experience .about-containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
   #experience .details-container {
     width: 95%;
-    max-width: 420px;
-    text-align: center;
-    padding: 1.5rem;
+    max-width: 400px;
+    padding: 1.5rem 1rem;
+    border-radius: 1.5rem;
+    text-align: left;
   }
 
   #experience .experience-sub-title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    text-align: center;
     margin-bottom: 1rem;
   }
 
@@ -112,13 +89,19 @@
 
   #experience article h3 {
     font-size: 1rem;
+    margin-bottom: 0.2rem;
   }
 
   #experience article p {
     font-size: 0.9rem;
+    color: rgb(100,100,100);
   }
 
-  /* General adjustments */
+  /* Headings */
+  .title {
+    font-size: 1.8rem;
+  }
+
   .section__text__p1,
   .section__text__p2 {
     text-align: center;
@@ -128,28 +111,24 @@
     height: fit-content;
     margin-bottom: 2rem;
   }
-
-  .title {
-    font-size: 1.8rem;
-  }
 }
 
-/* ----- Very small devices (up to 480px) ----- */
-@media screen and (max-width: 480px) {
-  body {
-    font-size: 0.9rem;
+/* ----- very small phones (up to 500px) ----- */
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  #experience .experience-sub-title {
+    font-size: 1.2rem;
   }
 
   .project-btn {
     font-size: 0.8rem;
     padding: 0.5rem 1rem;
-  }
-
-  .title {
-    font-size: 1.6rem;
-  }
-
-  #experience .experience-sub-title {
-    font-size: 1.2rem;
   }
 }
