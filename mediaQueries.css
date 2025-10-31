@@ -180,6 +180,15 @@
   #experience article p {
     font-size: 0.7rem;
   }
+
+  #experience .details-container{
+    width: 95%;           
+    min-height: 380px;    
+    padding: 2rem;        
+    background: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  }
 }
 
 /* ----- Responsive layout for Projects section ----- */
