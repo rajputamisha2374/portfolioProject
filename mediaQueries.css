@@ -1,46 +1,98 @@
-/* ===========================
-   MOBILE VIEW FIX (below 950px)
-   =========================== */
-@media screen and (max-width: 950px) {
+/* =============== Common Adjustments =============== */
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+  .about-containers {
+    flex-wrap: wrap;
+  }
+}
 
+/* =============== Tablet View =============== */
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+  }
+
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+
+  #profile,
+  .section-container {
+    display: block;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  section,
+  .section-container {
+    height: fit-content;
+  }
+
+  section {
+    margin: 0 5%;
+  }
+
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+
+  .about-containers {
+    margin-top: 0;
+  }
+}
+
+/* =============== MOBILE VIEW FIX (Under 950px) =============== */
+@media screen and (max-width: 950px) {
   body {
     font-size: 0.95rem;
     overflow-x: hidden;
   }
 
-  /* ======= PROJECTS SECTION ======= */
+  /* ---- PROJECTS SECTION ---- */
   #projects {
     padding: 2rem 1rem;
   }
 
   #projects .experience-details-container {
-    display: flex;
-    flex-direction: column; /* stack projects vertically */
-    align-items: center;
-    gap: 2rem;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 2rem !important;
   }
 
   #projects .details-container {
-    width: 95%;
-    max-width: 400px;
+    width: 90% !important;
+    max-width: 420px !important;
     background: #fff;
-    padding: 1.5rem;
+    padding: 1.5rem !important;
     border-radius: 1.2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    position: relative;
+    text-align: center !important;
+    position: static !important;
   }
 
   .project-img {
-    width: 100%;
-    max-height: 240px;
-    object-fit: contain;
+    width: 100% !important;
+    max-height: 240px !important;
+    object-fit: contain !important;
     border-radius: 1rem;
     margin-bottom: 1rem;
   }
 
   .project-title {
-    font-size: 1.1rem;
+    font-size: 1.1rem !important;
     font-weight: 600;
     margin-bottom: 0.5rem;
     word-break: keep-all;
@@ -55,43 +107,43 @@
   }
 
   .project-btn {
-    font-size: 0.85rem;
-    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem !important;
+    padding: 0.6rem 1.2rem !important;
   }
 
-  /* ======= SKILLS SECTION ======= */
+  /* ---- SKILLS SECTION ---- */
   #experience {
     padding: 2rem 1rem;
   }
 
   #experience .about-containers {
-    display: flex;
-    flex-direction: column; /* Stack vertically */
-    align-items: center;
-    gap: 2rem;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 2rem !important;
   }
 
   #experience .details-container {
-    width: 95%;
-    max-width: 450px;
+    width: 95% !important;
+    max-width: 450px !important;
     background: #fff;
-    padding: 1.8rem;
+    padding: 1.8rem !important;
     border-radius: 1.2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    position: relative;
+    position: static !important;
   }
 
   #experience .experience-sub-title {
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
     font-weight: 600;
     text-align: center;
     margin-bottom: 1rem;
   }
 
   #experience .article-container {
-    display: flex;
-    flex-direction: column; /* stack skills cleanly */
-    gap: 0.8rem;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.8rem !important;
   }
 
   #experience article {
@@ -115,7 +167,7 @@
     color: rgb(100, 100, 100);
   }
 
-  /* ======= HEADINGS ======= */
+  /* ---- HEADINGS ---- */
   .title {
     font-size: 1.8rem;
     text-align: center;
@@ -133,11 +185,8 @@
   }
 }
 
-/* ===========================
-   EXTRA SMALL DEVICES (below 500px)
-   =========================== */
+/* =============== SMALL DEVICES (Under 500px) =============== */
 @media screen and (max-width: 500px) {
-
   .title {
     font-size: 1.6rem;
   }
