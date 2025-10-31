@@ -1,18 +1,4 @@
-/* ----- General Responsive Rules ----- */
-
-/* Slightly smaller screens (like large laptops) */
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-
-  .about-containers {
-    flex-wrap: wrap;
-  }
-}
-
-/* ----- Tablet Screens (<=1200px) ----- */
+/* ----- Tablet and small laptop screens (up to 1200px) ----- */
 @media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
@@ -56,145 +42,27 @@
   }
 }
 
-/* ----- Mobile Screens (<=600px) ----- */
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
+/* ----- Modern phones (up to 900px) ----- */
+@media screen and (max-width: 900px) {
+  body {
+    font-size: 0.95rem;
   }
 
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
-  }
-
-  article {
-    font-size: 1rem;
-  }
-
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-
-  .contact-info-container {
-    margin: 0;
-  }
-
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-  }
-
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  .text-container {
-    text-align: justify;
-  }
-}
-
-/* ----- Responsive layout for Skills (Experience) section ----- */
-
-/* Tablets - 2 columns */
-@media (max-width: 1100px) {
-  #experience {
-    padding: 3rem 4rem;
-  }
-
-  #experience .about-containers {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-
-  #experience .details-container {
-    text-align: center;
-  }
-}
-
-/* Mobiles - 1 column */
-@media (max-width: 700px) {
-  #experience {
-    padding: 2rem 1.5rem;
-  }
-
+  #projects .experience-details-container,
   #experience .about-containers {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1.5rem;
-    align-items: center;
   }
 
-  #experience .details-container {
-    width: 90%;
-    padding: 1.5rem;
-    text-align: center;
-  }
-
-  #experience .experience-sub-title {
-    font-size: 1.4rem;
-  }
-
-  #experience .article-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-
-  #experience article h3 {
-    font-size: 1rem;
-  }
-
-  #experience article p {
-    font-size: 0.9rem;
-  }
-}
-
-/* ----- Responsive layout for Projects section ----- */
-@media (max-width: 900px) {
-  #projects .experience-details-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-
+  /* Project cards */
   #projects .details-container {
     width: 90%;
+    max-width: 400px;
     text-align: center;
-    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    margin: 0 auto;
   }
 
   .project-img {
@@ -217,5 +85,71 @@
   .project-btn {
     font-size: 0.9rem;
     padding: 0.6rem 1.2rem;
+  }
+
+  /* Skills section */
+  #experience {
+    padding: 2rem 1rem;
+  }
+
+  #experience .details-container {
+    width: 95%;
+    max-width: 420px;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  #experience .experience-sub-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  #experience .article-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  #experience article h3 {
+    font-size: 1rem;
+  }
+
+  #experience article p {
+    font-size: 0.9rem;
+  }
+
+  /* General adjustments */
+  .section__text__p1,
+  .section__text__p2 {
+    text-align: center;
+  }
+
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+}
+
+/* ----- Very small devices (up to 480px) ----- */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .project-btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  #experience .experience-sub-title {
+    font-size: 1.2rem;
   }
 }
