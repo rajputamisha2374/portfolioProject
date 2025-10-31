@@ -1,45 +1,44 @@
 /* ----- Responsive layout: phones up to 950px ----- */
 @media screen and (max-width: 950px) {
 
-  /* General layout */
   body {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     overflow-x: hidden;
   }
 
-  /* PROJECT SECTION */
+  /* ---------- PROJECTS SECTION ---------- */
   #projects {
     padding: 2rem 1rem;
   }
 
   #projects .experience-details-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack projects vertically */
     align-items: center;
     gap: 2rem;
   }
 
   #projects .details-container {
     width: 95%;
-    max-width: 400px;
+    max-width: 420px;
     background: #fff;
-    padding: 1.2rem 1rem;
+    padding: 1.5rem 1rem;
     border-radius: 1.5rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
     text-align: center;
   }
 
   .project-img {
-    width: 90%;
-    max-height: 180px;
+    width: 100%;
+    max-height: 220px; /* Make images more visible */
     object-fit: contain;
     border-radius: 1rem;
     margin-bottom: 1rem;
   }
 
   .project-title {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
     word-wrap: break-word;
   }
 
@@ -51,11 +50,11 @@
   }
 
   .project-btn {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
   }
 
-  /* SKILLS SECTION */
+  /* ---------- SKILLS SECTION ---------- */
   #experience {
     padding: 2rem 1rem;
   }
@@ -64,27 +63,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.8rem;
   }
 
   #experience .details-container {
     width: 95%;
-    max-width: 400px;
-    padding: 1.5rem 1rem;
+    max-width: 450px; /* increased box width */
+    padding: 1.8rem 1.5rem;
     border-radius: 1.5rem;
     text-align: left;
   }
 
   #experience .experience-sub-title {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
   }
 
   #experience .article-container {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
+    grid-template-columns: 1fr; /* stack skills vertically */
+    gap: 0.8rem;
   }
 
   #experience article h3 {
@@ -97,7 +96,7 @@
     color: rgb(100,100,100);
   }
 
-  /* Headings */
+  /* ---------- HEADINGS ---------- */
   .title {
     font-size: 1.8rem;
   }
@@ -113,22 +112,26 @@
   }
 }
 
-/* ----- very small phones (up to 500px) ----- */
+/* ----- Very small devices (up to 500px) ----- */
 @media screen and (max-width: 500px) {
   .title {
     font-size: 1.6rem;
   }
 
   .project-title {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .project-img {
+    max-height: 200px; /* Still visible but not overwhelming */
   }
 
   #experience .experience-sub-title {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 
   .project-btn {
     font-size: 0.8rem;
-    padding: 0.5rem 1rem;
+    padding: 0.45rem 0.9rem;
   }
 }
